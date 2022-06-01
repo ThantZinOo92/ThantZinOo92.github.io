@@ -1,1 +1,1 @@
-# Thant Zin Oo Resume
+https://thantzinoo92.github.io/
