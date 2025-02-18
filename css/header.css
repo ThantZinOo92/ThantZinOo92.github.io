@@ -1,0 +1,64 @@
+header {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* Darker, cohesive gradient background for the header */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Set a fixed height for the header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+header nav ul li a i {
+    margin-right: 8px;
+    font-size: large;
+}
+
+/* Background image size for mobile and desktop */
+@media (max-width: 768px) {
+    header nav ul li a i {
+        font-size: x-large; /* Hide the text on mobile view */
+        margin: 0;
+    }
+
+    header nav ul li a span {
+        display: none; /* Hide the text on mobile view */
+    }
+}

@@ -1,0 +1,88 @@
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    position: relative;
+}
+
+section {
+    position: absolute;
+    top: -999px; /* Adjust based on header height */
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    height: calc(100vh - 140px); /* Adjust height to fit within viewport, accounting for header and footer */
+    overflow: auto; /* Enable scrolling */
+    visibility: hidden; /* Hide sections by default */
+    justify-content: center;
+    align-items: center;
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-image: url('../public/images/background-image-desktop.jpg'); /* Add your background image here */
+}
+
+section.active {
+    top: 60px; /* Adjust based on header height */
+    opacity: 1;
+    visibility: visible; /* Show active section */
+}
+
+section .content {
+    color: #fff; /* White text color for better readability */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Larger shadow for floating effect */
+    width: 80%;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%); /* Start above the viewport */
+    opacity: 0;
+    transition: transform 2s ease, opacity 2s ease; /* Slow down the transition */
+    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    padding: 20px;
+    margin: 40px auto;
+}
+
+section.active .content {
+    transform: translateY(0);
+    opacity: 1;
+    animation: dropBounce 2s ease-out; /* Add drop and bounce animation */
+}
+
+/* Drop and bounce animation */
+@keyframes dropBounce {
+    0% {
+        transform: translateY(-100%);
+    }
+    60% {
+        transform: translateY(20px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Background image size for mobile and desktop */
+@media (max-width: 768px) {
+    section {
+        background-size: contain; /* Adjust background size for mobile devices */
+        background-image: url('../public/images/background-image-mobile.jpg'); /* Add your mobile background image here */
+    }
+
+    section .content {
+        background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    }
+}

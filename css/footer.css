@@ -1,0 +1,38 @@
+footer {
+    background: linear-gradient(135deg, #333, #555); /* Gradient background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    height: 60px; /* Adjust height as needed */
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+footer .footer-content .contact-info,
+footer .footer-content .footer-credits {
+    margin-bottom: 5px;
+}
+
+footer .footer-content .footer-credits p {
+    margin: 5px 0;
+    text-align: left; /* Align text to the left */
+}
+
+footer .footer-content .contact-info a:hover {
+    color: #fff; /* Change color on hover */
+}
+
+footer .footer-content .contact-info a {
+    color: #f39c12; /* Change icon color */
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}

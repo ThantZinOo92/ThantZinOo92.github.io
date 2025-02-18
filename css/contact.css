@@ -1,0 +1,63 @@
+#contact h2 {
+    font-size: 1.8em;
+    color: #f39c12; /* Add a different color for the heading */
+    margin-bottom: 20px;
+}
+
+#contact .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap between items */
+    justify-content: center;
+}
+
+#contact .contact-info li {
+    font-size: 1em;
+    max-width: 55%;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+    color: #fff; 
+    background-color: #444; 
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 20px); /* Two items per row with gap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#contact .contact-info li i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f39c12; /* Add a different color for the icons */
+    font-size: 1.2em;
+}
+
+#contact .contact-info a, #contact .contact-info p {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    margin: 0 0 0 30px; /* Add margin to align with icon */
+}
+
+#contact .contact-info a:hover {
+    color: #e6713e; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Ensure the contact items are responsive on mobile view */
+@media (max-width: 768px) {
+    #contact .contact-info {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    #contact .contact-info li {
+        flex: 1 1 100%; /* Make each item take full width */
+        max-width: 100%;
+    }
+}
